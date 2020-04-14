@@ -46,7 +46,7 @@ export default function App() {
 
               <View style={styles.techsContainer}>
                 {repository.techs.map(tech => (
-                  <Text style={styles.tech}>
+                  <Text key={tech} style={styles.tech}>
                     {tech}
                   </Text>
                   ))}
@@ -57,7 +57,7 @@ export default function App() {
                   style={styles.likeText}
                   testID={`repository-likes-${repository.id}`}
                 >
-                  {repository.likes} likes
+                  {repository.likes} curtidas
                 </Text>
               </View>
 
